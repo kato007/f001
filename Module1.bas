@@ -639,12 +639,12 @@ Public Sub OutputSheetFile()
     'outFolder2 = "\\hob1sv07ap\ﾊﾟﾛﾏ共有$\会議用\ニッカホーム請求書\その他\"
     'outFolder = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\"
     'outFolder2 = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\"
-    outFolder = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\大問屋関東\"
-    outFolder1 = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\ニッカホーム関東\"
-    outFolder2 = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\その他\"
-    'outFolder = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\大問屋関東\"
-    'outFolder1 = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\ニッカホーム関東\"
-    'outFolder2 = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\その他\"
+    'outFolder = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\大問屋関東\"
+    'outFolder1 = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\ニッカホーム関東\"
+    'outFolder2 = "\\HOB1SV03FS\販売⇔全国共有\■債権管理室■\■ニッカホーム請求書\その他\"
+    outFolder = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\大問屋関東\"
+    outFolder1 = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\ニッカホーム関東\"
+    outFolder2 = "C:\Users\KATOTO\Documents\ニッカホーム\テスト\その他\"
     'シート数取得
     intWksCnt = Excel.ActiveWorkbook.Worksheets.Count
     '***OFFにする
@@ -669,9 +669,9 @@ Public Sub OutputSheetFile()
                 Sheets(Array(Left(strWksnme, 8) & "表紙", Left(strWksnme, 8) & "内訳")).Select
                 'Sheets(Array(Left(strWksnme, 8) & "内訳", Left(strWksnme, 8) & "表紙")).Select
                 'Sheets(Left(strWksNme, 8) & "表紙").Activate
-                ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
-                    outFolder & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
-                    IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
+                'ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+                '    outFolder & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
+                '    IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
                 ActiveWindow.Close
             Else
                 If (Left(Workbooks("ニッカホーム請求書作成.xlsm").Sheets(Left(strWksnme, 8) & "表紙").Cells(6, 1), 6) = "ニッカホーム" Or _
@@ -687,9 +687,9 @@ Public Sub OutputSheetFile()
                     Sheets(Array(Left(strWksnme, 8) & "表紙", Left(strWksnme, 8) & "内訳")).Select
                     'Sheets(Array(Left(strWksnme, 8) & "内訳", Left(strWksnme, 8) & "表紙")).Select
                     'Sheets(Left(strWksNme, 8) & "表紙").Activate
-                    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
-                        outFolder1 & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
-                        IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
+                    'ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+                    '    outFolder1 & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
+                    '    IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
                     ActiveWindow.Close
                 Else
                     'ファイル保存
@@ -703,9 +703,9 @@ Public Sub OutputSheetFile()
                     Sheets(Array(Left(strWksnme, 8) & "表紙", Left(strWksnme, 8) & "内訳")).Select
                     'Sheets(Array(Left(strWksnme, 8) & "内訳", Left(strWksnme, 8) & "表紙")).Select
                     'Sheets(Left(strWksNme, 8) & "表紙").Activate
-                    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
-                        outFolder2 & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
-                        IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
+                    'ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+                    '    outFolder2 & Left(strWksnme, 8) & ".pdf", Quality:=xlQualityStandard, _
+                    '    IncludeDocProperties:=True, IgnorePrintAreas:=Ture, OpenAfterPublish:=False
                     ActiveWindow.Close
                 End If
             End If
